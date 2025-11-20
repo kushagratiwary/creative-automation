@@ -1,0 +1,51 @@
+campaign_name: "Holiday 2025 Electronics Campaign"
+target_region: "United States & Canada"
+audience: "Tech-savvy adults aged 25–45 looking for holiday deals"
+
+legal:
+  banned_words:
+    - "guaranteed cure"
+    - "100% risk-free"
+    - "best price in the world"
+
+brand:
+  name: "NovaTech Electronics"
+  primary_color: "#1A73E8"
+  logo_path: "examples/product_images/novatech_images/NovaTechLogo.png"
+
+products:
+  - id: "hyperbuds-pro"
+    name: "HyperBuds Pro Wireless Earbuds"
+    image_path: "examples/product_images/novatech_images/hyperbuds-pro.png"
+    message: "Experience immersive sound with HyperBuds Pro — now with adaptive noise cancellation and 40-hour battery life."
+    message_localized:
+      en_US: "Experience immersive sound with HyperBuds Pro — now with adaptive noise cancellation and 40-hour battery life."
+      fr_CA: "Découvrez un son immersif avec HyperBuds Pro — maintenant avec réduction de bruit adaptative et autonomie de 40 heures."
+      es_MX: "Experimenta un sonido envolvente con HyperBuds Pro — ahora con cancelación de ruido adaptativa y 40 horas de batería."
+
+  - id: "aurasmart-tv-55"
+    name: "AuraSmart 55-inch 4K HDR TV"
+    image_path: "examples/product_images/novatech_images/aurasmart-tv-55.jpg"
+    message: "Transform your home theater with the AuraSmart 55\" TV — vivid 4K HDR and ultra-thin bezel design."
+    message_localized:
+      en_US: "Transform your home theater with the AuraSmart 55\" TV — vivid 4K HDR and ultra-thin bezel design."
+      fr_CA: "Transformez votre cinéma maison avec le téléviseur AuraSmart 55\" — 4K HDR éclatant et cadre ultrafin."
+      es_MX: "Transforma tu cine en casa con la TV AuraSmart 55\" — HDR 4K vívido y un diseño de marco ultradelgado."
+
+  - id: "voltmax-powerbank-20k"
+    name: "VoltMax 20,000mAh Power Bank"
+    image_path: "examples/product_images/novatech_images/voltmax-powerbank-20k.jpg"
+    message: "Never run out of power again. VoltMax delivers fast charging and airline-safe convenience."
+    message_localized:
+      en_US: "Never run out of power again. VoltMax delivers fast charging and airline-safe convenience."
+      fr_CA: "Ne soyez plus jamais à court d’énergie. VoltMax offre une recharge rapide et un format sécuritaire pour l'avion."
+      es_MX: "Nunca te quedes sin energía. VoltMax ofrece carga rápida y seguridad para viajes en avión."
+
+  - id: "zenhome-speaker-mini"
+    name: "ZenHome Smart Speaker Mini"
+    image_path: "examples/product_images/novatech_images/zenhome-speaker-mini.jpg"
+    message: "Your home, smarter and simpler. Control music, lights, and routines with the ZenHome Speaker Mini."
+    message_localized:
+      en_US: "Your home, smarter and simpler. Control music, lights, and routines with the ZenHome Speaker Mini."
+      fr_CA: "Votre maison, plus intelligente et plus simple. Contrôlez musique, lumières et routines avec le ZenHome Mini."
+      es_MX: "Tu hogar, más inteligente y sencillo. Controla música, luces y rutinas con el ZenHome Mini."
