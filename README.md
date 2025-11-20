@@ -180,7 +180,6 @@ YYYY-MM-DD HH:MM:SS,ms LEVEL message
 
 ### What you will see
 - Brief loaded  
-- Product legal message check  
 - Gemini generation calls  
 - Gemini review iteration results  
 - Output save paths  
