@@ -13,7 +13,7 @@ from .utils import (
     fit_image_with_safe_bottom_zone,
     overlay_message_and_logo,
 )
-from .review_and_compliance import generate_with_review_loop
+from .compliance_and_review import generate_with_review_loop
 
 # Aspect ratios and pixel sizes we must support
 ASPECT_SPECS: Dict[str, Tuple[int, int]] = {

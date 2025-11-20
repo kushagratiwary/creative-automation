@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 from .brief_loader import load_brief
-from .review_and_compliance import summarize_brand_compliance
+from .compliance_and_review import summarize_brand_compliance
 from .processor import generate_creatives_for_product
 
 

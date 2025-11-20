@@ -69,7 +69,7 @@ creative_pipeline/
     image_generator.py
     utils.py
     processor.py
-    compliance.py
+    compliance_and_review.py
 
 examples/
     campaign_brief_*.yaml
@@ -121,7 +121,7 @@ Coordinates full creative generation:
 - Integrates Gemini review loop  
 - Writes final output files  
 
-### `compliance.py`
+### `compliance_and_review.py`
 Provides:
 - Brand compliance summary  
 - Gemini image review (legal, brand, quality)  
