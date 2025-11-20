@@ -1,0 +1,47 @@
+flowchart TD
+  start([Start: cli.py])
+  parse[Parse arguments]
+  config[Configure logging]
+  load[Load campaign brief]
+  brand[Summarize brand compliance]
+
+  start --> parse --> config --> load --> brand
+
+  brand --> hasMoreProducts{More products?}
+  hasMoreProducts -->|Yes| selectProd[Select product]
+  hasMoreProducts -->|No| done([Creative generation complete])
+
+  selectProd --> legalCheck[Run legal text check]
+  legalCheck --> legalOk{Legal OK?}
+  legalOk -->|Yes| logOk[Log legal OK]
+  legalOk -->|No| logWarn[Log warning]
+
+  logOk --> moreAspect{More aspect ratios?}
+  logWarn --> moreAspect
+
+  moreAspect -->|Yes| pickAspect[Pick aspect ratio]
+  moreAspect -->|No| hasMoreProducts
+
+  pickAspect --> genImage[Generate base image]
+  genImage --> review[Run compliance review]
+  review --> compliant{Brand compliant?}
+
+  %% FIXED: regenerate loops back to review
+  compliant -->|No| regenFeedback[Regenerate using feedback]
+  regenFeedback --> review
+
+  compliant -->|Yes| qualityOk{Quality OK?}
+
+  %% FIXED: regenerate for quality loops back to review
+  qualityOk -->|No| regenQuality[Regenerate for quality]
+  regenQuality --> review
+
+  qualityOk -->|Yes| accept[Accept image]
+  accept --> hasCompliant{Compliant image ready?}
+
+  hasCompliant -->|Yes| overlay[Overlay text and logo]
+  overlay --> save[Save creative]
+  save --> moreAspect
+
+  hasCompliant -->|No| error[Error: no compliant image]
+  error --> moreAspect

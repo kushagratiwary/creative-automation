@@ -1,0 +1,63 @@
+sequenceDiagram
+    actor User
+    participant CLI as cli.py
+    participant Loader as brief_loader.py
+    participant Review as compliance_and_review.py
+    participant Processor as processor.py
+    participant ImgGen as image_generator.py
+    participant Utils as utils.py
+    participant Gemini as Gemini API
+
+    User - CLI Run CLI with brief, output, locale, log
+    CLI - Loader load_brief(path)
+    Loader -- CLI CampaignBrief
+
+    CLI - Review summarize_brand_compliance(brief)
+    Review -- CLI brand compliance summary
+
+    loop For each product
+        CLI - Processor generate_creatives_for_product(product, brief, output_root, locale)
+
+        Processor - Utils choose_message_for_locale(product, locale)
+        Utils -- Processor localized message
+
+        loop For each aspect ratio
+            note over Processor Build refinement_callback
+
+            Processor - Review generate_with_review_loop(...)
+
+            loop Up to max_iterations
+                Review - Processor generate_fn(previous_img, feedback)
+
+                Processor - ImgGen generate_base_image(...)
+                ImgGen - Gemini generate_content (image generation)
+                Gemini -- ImgGen generated background
+                ImgGen -- Processor base_img
+
+                Processor - Utils fit_image_with_safe_bottom_zone(base_img)
+                Utils -- Processor fitted_img
+
+                Processor - Utils overlay_message_and_logo(fitted_img)
+                Utils -- Processor final_img
+
+                Review - Review review_image_with_gemini(final_img)
+                Review - Gemini generate_content (image review)
+                Gemini -- Review JSON review result
+                Review -- Review parse JSON into ReviewResult
+
+                alt Image compliant and quality OK
+                    Review -- Processor accept(final_img, review)
+                else Needs regeneration
+                    Review -- Processor feedback for next iteration
+                end
+            end
+
+            alt A compliant image exists
+                Processor - Processor save creative to output
+            else No compliant image found
+                Processor - Processor raise error
+            end
+        end
+    end
+
+    CLI -- User Creative generation complete
