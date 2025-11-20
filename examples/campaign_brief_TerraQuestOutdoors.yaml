@@ -1,0 +1,51 @@
+campaign_name: "Spring 2026 Outdoor Adventure Campaign"
+target_region: "United States & Canada"
+audience: "Outdoor enthusiasts aged 20–50 preparing for spring hiking and camping season"
+
+legal:
+  banned_words:
+    - "guaranteed cure"
+    - "100% risk-free"
+    - "best price in the world"
+
+brand:
+  name: "TerraQuest Outdoors"
+  primary_color: "#2C5F2D"
+  logo_path: "examples/product_images/terraquest_images/TerraQuestLogo.png"
+
+products:
+  - id: "summit-pro-tent-2p"
+    name: "SummitPro 2-Person Ultralight Tent"
+    image_path: "examples/product_images/terraquest_images/summit-pro-tent-2p.png"
+    message: "A lightweight, weatherproof tent built for fast setups and reliable protection on any trail."
+    message_localized:
+      en_US: "A lightweight, weatherproof tent built for fast setups and reliable protection on any trail."
+      fr_CA: "Une tente légère et résistante aux intempéries, conçue pour un montage rapide et une protection fiable sur tous les sentiers."
+      es_MX: "Una tienda ligera y resistente al clima, diseñada para un armado rápido y protección confiable en cualquier sendero."
+
+  - id: "glaciermax-sleepingbag-20f"
+    name: "GlacierMax 20°F Sleeping Bag"
+    image_path: "examples/product_images/terraquest_images/glaciermax-sleepingbag-20f.png"
+    message: "Stay warm in early spring temperatures with premium insulation and a soft, breathable interior."
+    message_localized:
+      en_US: "Stay warm in early spring temperatures with premium insulation and a soft, breathable interior."
+      fr_CA: "Restez au chaud lors des températures fraîches du printemps grâce à une isolation haut de gamme et un intérieur doux et respirant."
+      es_MX: "Mantente abrigado en las temperaturas frías de primavera con aislamiento de primera y un interior suave y transpirable."
+
+  - id: "trailforge-stove-kit"
+    name: "TrailForge Portable Stove Kit"
+    image_path: "examples/product_images/terraquest_images/trailforge-stove-kit.png"
+    message: "Cook meals anywhere with this compact stove kit offering efficient fuel use and fast boil times."
+    message_localized:
+      en_US: "Cook meals anywhere with this compact stove kit offering efficient fuel use and fast boil times."
+      fr_CA: "Préparez des repas partout avec ce kit de réchaud compact offrant une utilisation efficace du combustible et un temps d’ébullition rapide."
+      es_MX: "Cocina en cualquier lugar con este kit compacto de estufa que ofrece un uso eficiente del combustible y tiempos de ebullición rápidos."
+
+  - id: "ridgepath-hikingpack-45l"
+    name: "RidgePath 45L Hiking Backpack"
+    image_path: "examples/product_images/terraquest_images/ridgepath-hikingpack-45l.png"
+    message: "A durable 45-liter pack with ergonomic support, hydration compatibility, and ample storage for long day hikes."
+    message_localized:
+      en_US: "A durable 45-liter pack with ergonomic support, hydration compatibility, and ample storage for long day hikes."
+      fr_CA: "Un sac à dos durable de 45 litres avec soutien ergonomique, compatibilité d’hydratation et grand espace de rangement pour les longues randonnées."
+      es_MX: "Una mochila duradera de 45 litros con soporte ergonómico, compatibilidad con hidratación y amplio espacio para caminatas largas."
