@@ -3,4 +3,4 @@ argparse~=1.4.0
 Pillow>=10.0.0
 PyYAML>=6.0
 
-openai>=1.3.0
+google-genai>=1.152.0
