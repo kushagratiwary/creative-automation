@@ -11,13 +11,7 @@ flowchart TD
   hasMoreProducts -->|Yes| selectProd[Select product]
   hasMoreProducts -->|No| done([Creative generation complete])
 
-  selectProd --> legalCheck[Run legal text check]
-  legalCheck --> legalOk{Legal OK?}
-  legalOk -->|Yes| logOk[Log legal OK]
-  legalOk -->|No| logWarn[Log warning]
-
-  logOk --> moreAspect{More aspect ratios?}
-  logWarn --> moreAspect
+  selectProd --> moreAspect{More aspect ratios?}
 
   moreAspect -->|Yes| pickAspect[Pick aspect ratio]
   moreAspect -->|No| hasMoreProducts
