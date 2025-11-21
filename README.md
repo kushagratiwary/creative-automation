@@ -1,6 +1,6 @@
 # Creative Automation Pipeline
 
-This repository implements an end-to-end system that automatically transforms a structured YAML marketing brief into production-ready ad creatives using:
+This repository implements a command line system that automatically transforms a structured YAML marketing brief into ad creatives using:
 
 - Gemini 2.5 Flash Image for generating background scenes  
 - A deterministic layout engine for text and logo overlays  
